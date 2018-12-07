@@ -1,0 +1,1179 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/********************* 
+LETUR 
+**********************/
+
+body {
+    font-family: 'Nunito', sans-serif;
+}
+h1 {
+    font-size: 64px;
+    text-transform: uppercase;
+    font-weight: 300;
+    color: #ffffff;
+}
+h2 {
+    font-size: 32px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #1F1A1D;
+}
+h3 {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #1F1A1D;
+}
+h4 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #1F1A1D;
+}
+p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #1F1A1D;
+}
+
+/********************* 
+HEADER 
+**********************/
+
+header {
+	width: 100%;
+	top: 0;
+    left: 0;
+    transition: 0.3s;
+    z-index: 60;
+}
+/******* nav *******/
+nav {
+    width: 100%;
+    background-image: linear-gradient(to top, rgba(0,0,0,0), rgb(31, 26, 29, 0.6));
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 100;
+}
+/******* logo *******/
+
+#main_nav {
+    align-self: center;
+    display: flex;
+    padding-top: 80px;
+    transition: 0.5s;
+    z-index: 100;
+}
+#logo {
+    max-width: 120px;
+	height: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 70px;
+    margin-right: 20px;
+    transition: 0.5s;
+    z-index: 100;
+}
+/******* nav linkar *******/
+#navlink {
+    display: flex;
+    align-items: center;
+}
+#navlink h4 {
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 100;
+}
+#navlink li {
+    padding: 8px 32px;
+}
+#navlink h4:hover {
+    color: #743251;
+}
+.searchicon {
+    width: 32px;
+}
+/******* dropdown *******/
+
+.dropbtn {
+    border: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    text-align: center;
+    right: -70%;
+    margin-top: 4px;
+    background-color: rgba(31, 26, 29, 0.5);
+    border-radius: 4px;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 51;
+}
+.dropdown-content a {
+    padding: 12px 16px;
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropbtn {
+    border: none;
+}
+/*************** HAMBURGER MENU **************/
+#hamburgermenu {
+    display: none;
+}
+.burger {
+    width: 32px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    border-radius: 5px;
+    transition: all 2s;
+    z-index: 300;
+}
+.burgerContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 20px;
+    z-index: 300;
+}
+.menu{
+    right:0px;
+    background-color: #743251;
+    position: absolute;
+    top:0px;
+    height: 100vh;
+    width:0;
+    visibility: hidden;
+    transition: all 1s;
+    overflow: hidden;
+    z-index: -1;
+}
+.close{
+    cursor: pointer;
+}
+.show-menu{
+    width: 100%;
+    visibility: visible;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tilt-right{
+    transform:rotate(45deg);
+}
+.tilt-left{
+    transform:rotate(-45deg);
+}
+.change-to-x{
+    position: absolute;
+}
+#burgerlink li {
+    text-align: center;
+}
+#burgerlink h3 {
+    color: #ffffff;
+}
+#burgerlogo {
+    width: 110px;
+    margin: 40px;
+}
+/********************* 
+BAKGRUNNSMYNDIR 
+**********************/
+
+section.bg {
+    /* parallax scrolling */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+section.indexbg01 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 85vh; 
+}
+section.indexbg01:after {
+	content: '';
+	background-color: rgba(0,0,0,0.3);
+	width: 100%;
+	height: 85vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+section.indexbg02 {
+    background-image: url("../img/backgrimg02.jpg");
+    min-height: 50vh; 
+}
+section.indexbg02:after {
+	content: '';
+	background-color: rgba(0,0,0,0.3);
+	width: 100%;
+	height: 50vh;
+	position: absolute;
+	left: 0;
+}
+section.indexbg03 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 40vh; 
+}
+section.indexbg03:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 40vh;
+	position: absolute;
+	left: 0;
+}
+section.indexbg04 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 20vh; 
+}
+section.indexbg04:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 20vh;
+	position: absolute;
+	left: 0;
+}
+section.timatafla_bg01 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 40vh; 
+}
+section.timatafla_bg01:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 40vh;
+	position: absolute;
+	left: 0;
+}
+section.timatafla_bg02 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 20vh; 
+}
+section.timatafla_bg02:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 20vh;
+	position: absolute;
+	left: 0;
+}
+section.namskeid_bg01 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 40vh; 
+}
+section.namskeid_bg01:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 40vh;
+	position: absolute;
+	left: 0;
+}
+section.namskeid_bg02 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 20vh; 
+}
+section.namskeid_bg02:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 20vh;
+	position: absolute;
+	left: 0;
+}
+section.verdskra_bg01 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 40vh; 
+}
+section.verdskra_bg01:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 40vh;
+	position: absolute;
+	left: 0;
+}
+section.verdskra_bg02 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 20vh; 
+}
+section.verdskra_bg02:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 20vh;
+	position: absolute;
+	left: 0;
+}
+section.jogasetrid_bg01 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 40vh; 
+}
+section.jogasetrid_bg01:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 40vh;
+	position: absolute;
+	left: 0;
+}
+section.jogasetrid_bg02 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 20vh; 
+}
+section.jogasetrid_bg02:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 20vh;
+	position: absolute;
+	left: 0;
+}
+section.annad_bg01 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 40vh; 
+}
+section.annad_bg01:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 40vh;
+	position: absolute;
+	left: 0;
+}
+section.annad_bg02 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 20vh; 
+}
+section.annad_bg02:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 20vh;
+	position: absolute;
+	left: 0;
+}
+section.greidsla_bg01 {
+    background-image: url("../img/greidsla.png");
+    min-height: 40vh; 
+}
+section.greidsla_bg01:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 40vh;
+	position: absolute;
+	left: 0;
+}
+/********************* TEXTI Á BAKGRUNNSMYND **********************/
+.bg_txt_holder {
+    text-align: center;
+}
+
+/************************************* 
+SECTION Á MILLI MYNDA 
+**************************************/
+
+/********************* 
+TÍMATAFLA 
+**********************/
+
+#section01 {
+    padding: 24px;
+    height: 450px;
+    background-color: rgb(236, 236, 236);
+    z-index: 60;
+}
+#section01 h2 {
+    padding-bottom: 16px;
+    text-align: center;
+}
+#timar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow: hidden;
+    width: 700px;
+} 
+#day {
+    color: #ffffff;
+    padding: 8px;
+    background-color: #743251;
+    margin: 8px auto;
+}
+.collapsible {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #C4A0B1;
+    height: 40px;
+    cursor: pointer;
+    width: 700px; 
+    text-align: center;
+    margin: 4px auto;
+}
+h4.timi {
+    width: 20%;
+}
+h4.nafn{
+    width: 40%;
+    border-left: 2px solid #ffffff;
+}
+h4.kennari{
+    width: 40%;
+    border-left: 2px solid #ffffff;
+}
+.collapsible:hover {
+    background-color: #ABA4A8;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 680px;
+    margin: 0 auto;
+    padding: 0px 8px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    background-color: #E3DEE1;
+}
+.timatafla_info {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border-right: 2px solid #ffffff;
+    padding-right: 8px;
+    margin: 16px 8px;
+    width: 70%;
+}
+.timatafla_staff {
+    margin: 8px 8px;
+    width: 30%;
+}
+.staffimg {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
+/********************* CAROUSEL TÍMATAFLA **********************/
+
+#timarcarousel {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 70;
+}
+.timat_btn {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 50px;
+    color: #743251;
+    margin-top: 100px;
+    outline: none;
+}
+#timatcarousel {
+    display: flex;
+    position: relative;
+    transition: all 0.7s ease-in;
+    width: 700px;
+}
+/********************* 
+NÁMSKEIÐ 
+**********************/
+
+#section02 {
+    padding: 24px 24px;
+    height: 450px;
+    background-color: rgb(236, 236, 236);
+    z-index: 50;
+}
+#section02 h2 {
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+/************* NÁMSKEIÐ CARDS ********/
+
+#namskeidContainer {
+    width: 936px;   
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+#naestunamskeid {
+    position: relative;
+    flex-wrap: nowrap;
+    display: flex;
+}
+
+#namskdiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    margin: 0 auto;
+}
+.namskeid_card {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;   
+    margin: 16px;
+    border: 1px solid #1F1A1D;
+    width: 280px;
+    height: 280px;
+}
+.namskeid_card h4, .namskeid_card p {
+    text-align: center;
+    margin: 8px 0px;
+}
+.namskeid_card img {
+    width: 100%;
+}
+a.skraning {
+    width: 144px;
+    height: 32px;
+    margin: 8px auto;
+    background-color: #743251;
+    border-radius: 4px;
+}
+a.skraning h4 {
+    color: #ffffff;
+}
+/************* CAROUSEL NÁMSKEIÐ ********/
+
+#namskcarousel{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.namsk_btn {
+    width: 45px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 50px;
+    color: #743251;
+    margin-top: 100px;
+    outline: none;
+    
+}
+
+/*********************************** 
+PÓSTLISTI 
+************************************/
+
+#section03 {
+    padding: 24px;
+    height: 150px;
+    background-color: rgb(236, 236, 236);
+    z-index: 60;
+}
+#section03 h2 {
+    padding-bottom: 16px;
+    text-align: center;
+}
+#postlisti {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.emailinput {
+    background-color: rgb(236, 236, 236);
+    width: 250px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid #743251;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    padding-left: 10px;
+}
+#postlistiBtn {
+    width: 144px;
+    height: 32px;
+    background-color: #743251;
+    border: 1px solid #743251;
+    border-radius: 4px;
+    font-family: 'Nunito', sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+/*************popup ****************/
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1200; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.5);
+}
+.modal_content {
+    background-color: #E3DEE1;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #743251;
+    width: 50%;
+    height: 350px;
+}
+.modal_content h2{
+    color: #743251;
+    line-height: 50px;
+    padding-top: 100px;
+}
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.close:hover,
+.close:focus {
+    color: #1F1A1D;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/**************************************** 
+TIMATAFLA UNDIRSÍÐA
+*****************************************/
+
+#timatafla {
+    text-align: center;
+    padding: 24px;
+    
+}
+#timatafla h2 {
+    padding-bottom: 16px;
+    
+}
+#timatafla_div {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    margin: 0 auto;
+}
+
+/**************************************** 
+NÁMSKEIÐ UNDIRSÍÐA
+*****************************************/
+
+#namskeid {
+    padding: 24px;
+    text-align: center;
+    background-color: rgb(236, 236, 236);
+}
+#namskeid h2 {
+    padding-bottom: 16px;
+}
+#namskeid_div {
+    display: flex;
+    flex-direction: column;
+}
+button.filterbtn {
+    width: 100px;
+    height: 32px;
+    margin: 4px auto;
+    background-color: #743251;
+    border-radius: 4px;
+}
+button.filterbtn h4 {
+    color: #ffffff;
+}
+/**************************************** 
+KENNARANÁM UNDIRSÍÐA
+*****************************************/
+
+section.kennaranam_bg01 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 40vh; 
+}
+section.kennaranam_bg01:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 40vh;
+	position: absolute;
+	left: 0;
+}
+section.kennaranam_bg02 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 20vh; 
+}
+section.kennaranam_bg02:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 20vh;
+	position: absolute;
+	left: 0;
+}
+#kennaranam {
+    padding: 24px;
+    text-align: center;
+    background-color: rgb(236, 236, 236);
+}
+#kennaranam h2 {
+    padding-bottom: 16px;
+}
+#kennaranam_div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+}
+/************* KENNARANÁM CARDS ********/
+
+.kennaranam_card {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;   
+    margin: 16px;
+    border: 1px solid #1F1A1D;
+    width: 250px;
+    height: 400px;
+}
+.kennaranam_card h4 {
+    text-align: center;
+    margin: 8px 0px;
+}
+.kennaranam_card img {
+    width: 100%;
+}
+a.nammeira h4 {
+    color: #ffffff;
+    width: 144px;
+    padding: 4px 0;
+    margin: 6px auto;
+    background-color: #743251;
+    border-radius: 4px;
+}
+
+/**************************************** 
+VERÐSKRÁ UNDIRSÍÐA
+*****************************************/
+
+#verdskra {
+    padding: 24px;
+    text-align: center;
+    background-color: rgb(236, 236, 236);
+}
+#verdskra h2 {
+    padding-bottom: 16px;
+}
+#verdskra_div {
+    display: flex;
+    flex-direction: column;
+}
+
+/**************************************** 
+KENNARAR UNDIRSÍÐA
+*****************************************/
+
+section.kennarar_bg01 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 40vh; 
+}
+section.kennarar_bg01:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 40vh;
+	position: absolute;
+	left: 0;
+}
+section.kennarar_bg02 {
+    background-image: url("../img/backgrimg01.png");
+    min-height: 20vh; 
+}
+section.kennarar_bg02:after {
+	content: '';
+	background-color: rgba(0,0,0,0.5);
+	width: 100%;
+	height: 20vh;
+	position: absolute;
+	left: 0;
+}
+#kennarar {
+    padding: 24px;
+    text-align: center;
+    background-color: rgb(236, 236, 236);
+}
+#kennarar h2 {
+    padding-bottom: 16px;
+}
+#kennarar_div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+/************* KENNARAR CARDS ********/
+.kennarar_card {
+    position: relative;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;   
+    margin: 8px;
+    border: 1px solid #1F1A1D;
+    width: 350px;
+    height: 350px;
+}
+.kennimg {
+    width: 100%;
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.kennarar_info {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.kennarar_card:hover .kennimg {
+    opacity: 0.3;
+}
+.kennarar_card:hover .kennarar_info {
+    opacity: 1;
+}
+.kennname {
+    background-color: #74325198;
+    color: #ffffff;
+    padding: 8px 16px;
+}
+
+/**************************************** 
+JÓGASETRIÐ UNDIRSÍÐA
+*****************************************/
+
+#jogasetrid {
+    text-align: center;
+    padding: 24px;
+    
+}
+#jogasetrid h2 {
+    padding-bottom: 16px;
+    
+}
+
+/**************************************** 
+ANNAÐ UNDIRSÍÐA
+*****************************************/
+
+#annad {
+    text-align: center;
+    padding: 24px;
+    
+}
+#annad h2 {
+    padding-bottom: 16px;
+    
+}
+/**************************************** 
+FOOTER
+*****************************************/
+
+footer {
+    height: 200px;
+    padding: 24px;
+    background-color: #743251;
+}
+#footerDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    width: 80%;
+    margin: 0 auto;
+    align-items: baseline;
+}
+#footerDiv h4 {
+    color: #ffffff;
+}
+#footerlogo {
+    height: 80px;
+    margin: 16px 0px;
+}
+.footerleft {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.footerright {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.footermiddle {
+    display: flex;
+    flex-direction: column;
+}
+.socialmedia {
+    margin:16px 0px;
+}
+.footer_icon {
+    height: 40px;
+    margin-left: 8px;
+}
+footer p {
+    text-align: center;
+    margin-top: 24px;
+    font-size: 12px;
+    color: #ABA4A8;
+}
+footer h4 {
+    text-align: center;
+    color: #ffffff;
+}
+
+
+/**************************************** 
+Media queries
+*****************************************/
+
+@media only screen and (max-width: 1150px) {
+    #navlink li {
+    padding: 8px 24px;
+    transition-duration: 0.3s;
+    }
+    #logo {
+    margin-left: 62px;
+    transition-duration: 0.3s;
+    }
+}
+
+@media only screen and (max-width: 1075px) {
+    #navlink li {
+    padding: 8px 8px;
+    transition-duration: 0.3s;
+    }
+    #logo {
+    margin-left: 38px;
+    transition-duration: 0.3s;
+    }
+    .timat_btn {
+    width: 50px;
+    }
+    #namskeidContainer {
+    width: 624px;  
+    transition-duration: 0.3s; 
+    }
+    .modal_content {
+    width: 70%;
+    transition-duration: 0.3s;
+    }
+    footer {
+    padding: 16px;
+    height: 250px;
+    transition-duration: 0.3s;
+    }
+    #footerDiv {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    transition-duration: 0.3s;
+    }
+    footer p {
+    margin-top: 8px;
+    transition-duration: 0.3s;
+    }
+}
+
+@media only screen and (max-width: 860px) {
+    #main_nav {
+    padding-top: 10px;
+    transition-duration: 0.3s;
+    }
+    #navlink li.dispnone {
+    display: none;
+    transition-duration: 0.3s;
+    }
+    #logo {
+    margin-left: 32px;
+    width: 90px;
+    margin-top: 20px;
+    transition-duration: 0.3s;
+    }
+    #hamburgermenu {
+    display: list-item;
+    margin-right: 8px;
+    transition-duration: 0.3s;
+    }
+    #section01 {
+    padding: 24px 8px;
+    transition-duration: 0.3s;
+    }
+    #timar {
+    width: 300px;
+    transition-duration: 0.3s;
+    } 
+    #day {
+    width: 300px;
+    transition-duration: 0.3s;
+    }
+    .collapsible {
+    width: 300px;
+    transition-duration: 0.3s; 
+    }
+    h4.timi {
+    width: 40%;
+    transition-duration: 0.3s;
+    }
+    h4.nafn{
+    width: 60%;
+    transition-duration: 0.3s;
+    }
+    h4.kennari{
+    display: none;
+    transition-duration: 0.3s;
+    }   
+    .content {
+    width: 284px;
+    transition-duration: 0.3s;
+    }
+    .timatafla_info {
+    margin: 8px 8px;
+    transition-duration: 0.3s;
+    }
+}
+
+@media only screen and (max-width: 766px) {
+    #section01 {
+    padding: 24px 0px;
+    transition-duration: 0.3s;
+    }
+    #namskeidContainer {
+    width: 312px; 
+    transition-duration: 0.3s;  
+    }
+    #section02 {
+    padding: 24px 0px;
+    transition-duration: 0.3s;
+    }
+    #postlisti {
+    margin-top: 8px;
+    transition-duration: 0.3s;
+    }
+    .modal_content {
+    width: 90%;
+    transition-duration: 0.3s;
+    }
+    .socialmedia {
+    margin-bottom: 8px;
+    transition-duration: 0.3s;
+    }
+    #section03 h2 {
+    font-size: 24px;
+    transition-duration: 0.3s;
+    }
+    section.indexbg01 {
+    min-height: 80vh; 
+    transition-duration: 0.3s;
+    }
+    section.indexbg01:after {
+    height: 80vh;
+    transition-duration: 0.3s;
+    }
+    section.indexbg02 {
+    min-height: 20vh;
+    transition-duration: 0.3s; 
+    }
+    section.indexbg02:after {
+    height: 20vh;
+    transition-duration: 0.3s;
+    }
+    section.indexbg03 {
+    min-height: 20vh;
+    transition-duration: 0.3s; 
+    }
+    section.indexbg03:after {
+    height: 20vh;
+    transition-duration: 0.3s;
+    } 
+    section.indexbg04 {
+    min-height: 10vh;
+    transition-duration: 0.3s; 
+    }
+    section.indexbg04:after {
+    height: 10vh;
+    transition-duration: 0.3s;
+    }  
+}
+
+@media only screen and (max-width: 475px) {
+    .modal_content h2{
+    padding-top: 60px;
+    transition-duration: 0.3s;
+    }
+    #postlisti {
+    margin-top: 0px;
+    width: 370px;
+    transition-duration: 0.3s;
+    }
+    #section03 {
+    padding: 16px;
+    height: 100px;
+    transition-duration: 0.3s;
+    }
+    #section03 h2 {
+    font-size: 16px;
+    transition-duration: 0.3s;
+    }
+    .emailinput {
+    width: 200px;
+    height: 24px;
+    transition-duration: 0.3s;
+    }
+    #postlistiBtn {
+    width: 144px;
+    height: 24px;
+    transition-duration: 0.3s;
+    }
+}
